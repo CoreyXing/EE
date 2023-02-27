@@ -225,12 +225,12 @@ if __name__ == "__main__":
     # 测试实体识别
     # ============================
     max_seq_len = 256
-    with open("../../../EE/data/ee/duee/labels.txt", "r", encoding="utf-8") as fp:
+    with open("./data/ee/duee/labels.txt", "r", encoding="utf-8") as fp:
         entity_label = fp.read().strip().split("\n")
 
     print(entity_label)
     tasks = ["ner"]
-    train_dataset = EeDataset(file_path='../../../EE/data/ee/duee/duee_train.json',
+    train_dataset = EeDataset(file_path='./data/ee/duee/duee_train.json',
                               tokenizer=tokenizer,
                               max_len=max_seq_len,
                               entity_label=entity_label,
